@@ -1,0 +1,112 @@
+{
+  "Metadata": {
+    "title": "CiteOps — AEO & GEO audits for the answer-engine era",
+    "description": "Lighthouse-inspired CLI that scores web content for Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). HTML, JSON, and CSV reports plus CI gates."
+  },
+  "branding": {
+    "logoAlt": "CiteOps wordmark"
+  },
+  "Nav": {
+    "why": "Why",
+    "aeoGeo": "AEO & GEO",
+    "how": "How it works",
+    "product": "Product",
+    "action": "Demo",
+    "reviews": "Reviews",
+    "github": "GitHub",
+    "npm": "npm"
+  },
+  "Hero": {
+    "eyebrow": "Open source · MIT · CLI",
+    "title": "Measure how well your content works for AI answers not just blue links.",
+    "subtitle": "CiteOps audits URLs and local pages for AEO and GEO, explains what failed, and ships reports your team can act on. One install, your pipeline stays yours.",
+    "ctaGithub": "View on GitHub",
+    "ctaNpm": "Package on npm",
+    "installLabel": "Install"
+  },
+  "Stats": {
+    "reports": "Report formats",
+    "reportsValue": "HTML · JSON · CSV",
+    "inputs": "Audit inputs",
+    "inputsValue": "URL · file · folder · sitemap",
+    "ci": "CI-ready",
+    "ciValue": "Thresholds & exit codes"
+  },
+  "Why": {
+    "title": "Why this matters now",
+    "lead": "Discovery is splitting: people still search, but they also ask chat assistants that synthesize answers from many sources. If your content is not structured for citation and clarity, you can rank—and still be invisible where decisions happen.",
+    "p1": "Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) are the practices that make your pages trustworthy, quotable, and machine-legible when models summarize the web.",
+    "p2": "CiteOps gives you a repeatable score and a punch list—like Lighthouse did for performance—so editors, SEO, and engineering share one definition of “good enough” before you ship.",
+    "quote": "If you cannot measure it against a checklist, you cannot improve it on every release."
+  },
+  "Education": {
+    "title": "AEO & GEO in plain language",
+    "subtitle": "Both aim for visibility when answers are generated—not just ten blue links. CiteOps checks your content with that lens.",
+    "aeoTitle": "AEO — Answer Engine Optimization",
+    "aeoBody": "Optimizing for engines that extract direct answers: featured snippets, voice, and structured Q&A surfaces. Strong headings, factual blocks, and clear entity signals help your page become the answer source—not a footnote.",
+    "aeoProduct": "CiteOps surfaces gaps that weaken answer readiness: clarity, structure, and signals models use when choosing what to quote.",
+    "geoTitle": "GEO — Generative Engine Optimization",
+    "geoBody": "Optimizing for large language models that synthesize across sources. Consistent naming, attributable facts, and crawl-friendly markup reduce hallucination risk and improve the odds your brand is represented accurately.",
+    "geoProduct": "CiteOps scores GEO-oriented signals alongside AEO so you see composite risk, not a single vanity metric."
+  },
+  "How": {
+    "title": "How CiteOps works",
+    "subtitle": "From a URL or file to a report you can share in CI or a browser.",
+    "step1Title": "Choose input",
+    "step1Body": "Point the CLI at a URL, a Markdown or HTML file, a folder, or a sitemap. Rate limits and robots.txt are respected unless you override for your own property.",
+    "step2Title": "Run the audit",
+    "step2Body": "Checks run against your content; failures include explanations so writers and devs know what to fix.",
+    "step3Title": "Get scores",
+    "step3Body": "Composite, AEO, and GEO scores summarize readiness. Tune with optional .citeops.json when you need project defaults.",
+    "step4Title": "Export & gate",
+    "step4Body": "Emit HTML for humans, JSON for automation, or CSV for batches. Use --ci and --threshold to fail builds when scores drop."
+  },
+  "Product": {
+    "title": "Built for product teams",
+    "subtitle": "Everything in the CLI is designed for shipping workflows—not one-off spreadsheets.",
+    "card1Title": "Reports that fit the audience",
+    "card1Body": "HTML for stakeholders, JSON for pipelines, CSV for sitemap or folder runs.",
+    "card2Title": "Project configuration",
+    "card2Body": "Optional .citeops.json in the repo or home directory; override path per run.",
+    "card3Title": "CI you can trust",
+    "card3Body": "Exit codes for pass, score failure, network errors, and bad input—mirror how you run Lighthouse in CI.",
+    "card4Title": "Operational safety",
+    "card4Body": "Read-only fetches, configurable rate limits, and robots awareness for compliant crawling.",
+    "card5Title": "Overview command",
+    "card5Body": "llm-citeops overview surfaces capabilities, outputs, and quick-start hints in the terminal.",
+    "card6Title": "Batch at scale",
+    "card6Body": "Audit directories of Markdown/HTML or expand sitemaps to CSV for wide coverage."
+  },
+  "Action": {
+    "title": "See it in your terminal",
+    "subtitle": "The overview command summarizes what the tool can do—similar spirit to a capability dashboard.",
+    "imageAlt": "Terminal screenshot of the llm-citeops overview capability dashboard",
+    "codeCaption": "Quick start",
+    "codeBlock": "npx llm-citeops audit --url \"https://example.com/docs/article\" --output html --output-path ./report.html"
+  },
+  "Compatibility": {
+    "title": "Compatibility",
+    "subtitle": "Runs anywhere you run Node—local, CI, or container.",
+    "node": "Node.js 18+",
+    "npm": "npm / npx",
+    "ci": "GitHub Actions, GitLab CI, etc.",
+    "os": "macOS · Linux · Windows"
+  },
+  "Reviews": {
+    "title": "What people say",
+    "subtitle": "Real quotes from users will appear here as they come in.",
+    "emptyTitle": "Reviews coming soon",
+    "emptyBody": "We are collecting feedback from teams using CiteOps. Check back, or star the repo to follow releases."
+  },
+  "Cta": {
+    "title": "Start auditing before the next release",
+    "subtitle": "Install globally or run with npx. Reports are local—no account, no cloud dependency for the core CLI.",
+    "ctaGithub": "Star on GitHub",
+    "ctaDocs": "README on GitHub"
+  },
+  "Footer": {
+    "rights": "CiteOps (llm-citeops) is MIT licensed. Respect robots.txt, terms of use, and rate limits when auditing third-party sites.",
+    "github": "GitHub",
+    "npm": "npm"
+  }
+}

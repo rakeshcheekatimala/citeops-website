@@ -1,0 +1,6 @@
+import type { ReactNode } from "react";
+
+/** Root pass-through; `<html>` and `<body>` live in `[locale]/layout.tsx`. */
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return children;
+}

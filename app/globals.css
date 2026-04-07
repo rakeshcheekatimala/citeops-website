@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm editorial palette (Claude blog–inspired) */
+  --color-paper: #faf8f5;
+  --color-paper-muted: #f3efe8;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #4a4540;
+  --color-ink-subtle: #6b6560;
+  --color-border: #e8e2d9;
+  --color-border-strong: #d4ccc0;
+  --color-accent: #b54a32;
+  --color-accent-hover: #9c3f2a;
+  --color-accent-fg: #fffaf8;
+  --color-wash: #fffdfa;
+  --color-card: #ffffff;
+  --shadow-soft: 0 1px 2px rgb(26 26 26 / 0.04),
+    0 12px 40px rgb(26 26 26 / 0.06);
+}
+
+body {
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
