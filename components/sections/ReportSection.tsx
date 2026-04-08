@@ -59,23 +59,21 @@ export async function ReportSection() {
             </div>
           </div>
 
-          <div className="rounded-[30px] border border-border bg-card p-4 shadow-soft sm:p-6">
-            <div className="rounded-[24px] bg-ink p-4 text-paper sm:p-6">
+          <div className="rounded-[32px] border border-border bg-card p-4 shadow-soft sm:p-6">
+            <div className="rounded-[28px] bg-paper-muted p-4 sm:p-6">
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/70">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-subtle">
                     {t("sampleLabel")}
                   </p>
-                  <h3 className="mt-3 font-display text-xl font-semibold sm:text-2xl">
+                  <h3 className="mt-3 font-display text-3xl font-semibold text-ink sm:text-4xl">
                     {t("sampleTitle")}
                   </h3>
                 </div>
-                <span className="rounded-full bg-paper/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em]">
-                  {t("sampleStatus")}
-                </span>
+               
               </div>
 
-              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="mt-8 grid gap-3 sm:grid-cols-3">
                 {[
                   { label: "Composite", value: "74" },
                   { label: "AEO", value: "81" },
@@ -83,12 +81,12 @@ export async function ReportSection() {
                 ].map((score) => (
                   <div
                     key={score.label}
-                    className="rounded-2xl border border-paper/10 bg-paper/5 p-4"
+                    className="rounded-[24px] border border-border bg-card p-5"
                   >
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-paper/60">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-subtle">
                       {score.label}
                     </p>
-                    <p className="mt-2 font-display text-3xl font-semibold sm:text-4xl">
+                    <p className="mt-3 font-display text-5xl font-semibold text-ink">
                       {score.value}
                     </p>
                   </div>
@@ -96,23 +94,23 @@ export async function ReportSection() {
               </div>
 
               <div className="mt-6 space-y-4">
-                <div className="rounded-2xl border border-paper/10 bg-paper/5 p-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-paper/60">
+                <div className="rounded-[24px] border border-border bg-card p-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-subtle">
                     {t("summaryLabel")}
                   </p>
-                  <p className="mt-2 text-sm leading-7 text-paper/85">
+                  <p className="mt-4 text-base leading-8 text-ink-muted">
                     {t("summaryBody")}
                   </p>
                 </div>
-                <div className="rounded-2xl border border-paper/10 bg-paper/5 p-4">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-paper/60">
+                <div className="rounded-[24px] border border-border bg-card p-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-subtle">
                     {t("fixesLabel")}
                   </p>
                   <div className="mt-3 space-y-3">
                     {[t("fix1"), t("fix2"), t("fix3")].map((item) => (
                       <p
                         key={item}
-                        className="rounded-xl bg-paper/5 px-3 py-2 text-sm text-paper/85"
+                        className="rounded-2xl bg-paper-muted px-4 py-3 text-sm leading-7 text-ink-muted"
                       >
                         {item}
                       </p>

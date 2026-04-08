@@ -24,6 +24,9 @@ export const branding = {
   overviewImageUrl:
     process.env.NEXT_PUBLIC_OVERVIEW_IMAGE_URL ??
     "https://raw.githubusercontent.com/rakeshcheekatimala/llm-citeops/main/assets/overview.png",
+  explainerImageUrl:
+    process.env.NEXT_PUBLIC_EXPLAINER_IMAGE_URL ??
+    "/brand/ai-visibility-explainer.png",
 } as const;
 
 export type Branding = typeof branding;

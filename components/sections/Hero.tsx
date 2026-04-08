@@ -11,7 +11,7 @@ export async function Hero() {
       id="top"
       className="relative overflow-hidden border-b border-border bg-gradient-to-b from-wash to-paper"
     >
-      <div className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_top_left,_rgba(181,74,50,0.14),_transparent_45%),radial-gradient(circle_at_top_right,_rgba(26,26,26,0.08),_transparent_35%)]" />
+      <div className="absolute inset-x-0 top-0 h-64" />
       <div className="safe-pad mx-auto max-w-content pb-16 pt-12 sm:px-6 sm:pb-24 sm:pt-20 lg:px-8 lg:pb-28 lg:pt-24">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-12">
           <div className="relative">

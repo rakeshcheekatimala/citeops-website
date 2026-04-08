@@ -6,6 +6,7 @@ import { AudienceSection } from "@/components/sections/AudienceSection";
 import { CompatibilitySection } from "@/components/sections/CompatibilitySection";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { EducationSection } from "@/components/sections/EducationSection";
+import { ExplainerSection } from "@/components/sections/ExplainerSection";
 import { Hero } from "@/components/sections/Hero";
 import { HowSection } from "@/components/sections/HowSection";
 import { ProductSection } from "@/components/sections/ProductSection";
@@ -66,6 +67,7 @@ export default async function HomePage({ params }: Props) {
       <SiteHeader />
       <main id="main-content">
         <Hero />
+        <ExplainerSection />
         <StatsStrip />
         <WhySection />
         <AudienceSection />

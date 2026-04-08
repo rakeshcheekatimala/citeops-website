@@ -92,6 +92,17 @@
     "geoBody": "Optimizing for large language models that synthesize across sources. Consistent naming, attributable facts, and crawl-friendly markup reduce hallucination risk and improve the odds your brand is represented accurately.",
     "geoProduct": "CiteOps scores GEO-oriented signals alongside AEO so you see composite risk, not a single vanity metric."
   },
+  "Explainer": {
+    "eyebrow": "AI visibility map",
+    "title": "Show the market how visibility moves from ranking to being cited.",
+    "subtitle": "This visual belongs right after the hero because it explains the category quickly, builds trust with founders and operators, and gives the rest of the page a clearer frame.",
+    "imageAlt": "Explainer graphic showing how SEO connects to AEO and GEO in AI search",
+    "point1": "Use this as a category explainer, not as the main conversion hero. It works best once the headline has already made the promise.",
+    "point2": "On mobile, keep the image inside a clean card and let users open the full visual when they want more detail.",
+    "point3": "This strengthens founder-level positioning by showing that CiteOps is built on a clear framework, not just a tool surface.",
+    "openImage": "Open full visual",
+    "cta": "Try the playground"
+  },
   "How": {
     "title": "How CiteOps works",
     "subtitle": "From a URL or file to a report you can share in CI or a browser.",

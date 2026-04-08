@@ -34,7 +34,7 @@ export async function SiteHeader() {
               width={branding.logo.width}
               height={branding.logo.height}
               priority
-              className="h-9 w-auto"
+              className="h-14 w-auto"
             />
           </Link>
           <nav
