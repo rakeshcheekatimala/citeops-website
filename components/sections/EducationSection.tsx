@@ -6,15 +6,15 @@ export async function EducationSection() {
   return (
     <section
       id="aeo-geo"
-      className="scroll-mt-24 border-b border-border bg-wash py-20 sm:py-24"
+      className="scroll-mt-24 border-b border-border bg-wash py-16 sm:py-24"
     >
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+      <div className="safe-pad mx-auto max-w-content sm:px-6 lg:px-8">
+        <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-4xl">
           {t("title")}
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-muted">{t("subtitle")}</p>
-        <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-12">
-          <article className="rounded-2xl border border-border bg-card p-8 shadow-soft">
+        <p className="mt-4 max-w-2xl text-base text-ink-muted sm:text-lg">{t("subtitle")}</p>
+        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:gap-10">
+          <article className="rounded-2xl border border-border bg-card p-5 shadow-soft sm:p-8">
             <h3 className="font-display text-xl font-semibold text-ink">
               {t("aeoTitle")}
             </h3>
@@ -23,7 +23,7 @@ export async function EducationSection() {
             </p>
             <p className="mt-6 text-sm font-medium text-accent">{t("aeoProduct")}</p>
           </article>
-          <article className="rounded-2xl border border-border bg-card p-8 shadow-soft">
+          <article className="rounded-2xl border border-border bg-card p-5 shadow-soft sm:p-8">
             <h3 className="font-display text-xl font-semibold text-ink">
               {t("geoTitle")}
             </h3>

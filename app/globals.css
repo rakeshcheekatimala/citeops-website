@@ -24,6 +24,7 @@ body {
   color: var(--color-ink);
   background: var(--color-paper);
   font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: clip;
 }
 
 .font-display {
@@ -33,5 +34,10 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .safe-pad {
+    padding-inline: max(1rem, env(safe-area-inset-left))
+      max(1rem, env(safe-area-inset-right));
   }
 }

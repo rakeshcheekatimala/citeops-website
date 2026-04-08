@@ -6,8 +6,8 @@ export async function CompatibilitySection() {
   const items = [t("node"), t("npm"), t("ci"), t("os")];
 
   return (
-    <section className="border-b border-border bg-paper py-16 sm:py-20">
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+    <section className="border-b border-border bg-paper py-14 sm:py-20">
+      <div className="safe-pad mx-auto max-w-content sm:px-6 lg:px-8">
         <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">
           {t("title")}
         </h2>

@@ -71,9 +71,6 @@ export function PlaygroundClient() {
           headers: { "content-type": "application/json" },
           body: JSON.stringify({ url, report }),
         });
-
-        console.log('openai response', response);
-
         const payload = (await readJsonResponse(response)) as
           | CompetitorAnalysisResponse
           | { error?: string };
@@ -115,24 +112,30 @@ export function PlaygroundClient() {
   }
 
   return (
-    <div className="mx-auto max-w-content px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-      <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-        <section className="rounded-[28px] border border-border bg-card p-6 shadow-soft sm:p-8">
+    <div className="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+      <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
+        <section
+          aria-labelledby="playground-title"
+          className="rounded-[28px] border border-border bg-card p-5 shadow-soft sm:p-8"
+        >
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">
               Playground
             </p>
-            <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
+            <h1
+              id="playground-title"
+              className="mt-4 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl"
+            >
               Run a live SiteOps audit, then compare it with competitors.
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-ink-muted">
+            <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
               Enter a URL to generate AEO and GEO scores with the SiteOps
               heuristics. Then use AI to discover competitor pages, audit them,
               and judge how your page stacks up.
             </p>
           </div>
 
-          <form className="mt-8 space-y-4" onSubmit={handleAuditSubmit}>
+          <form className="mt-8 space-y-4" onSubmit={handleAuditSubmit} aria-describedby="playground-help">
             <label className="block">
               <span className="mb-2 block text-sm font-medium text-ink">
                 URL to audit
@@ -141,11 +144,17 @@ export function PlaygroundClient() {
                 value={url}
                 onChange={(event) => setUrl(event.target.value)}
                 placeholder="https://example.com/blog/aeo-guide"
+                inputMode="url"
+                autoComplete="url"
+                aria-describedby="playground-help"
                 className="w-full rounded-2xl border border-border-strong bg-wash px-4 py-3 text-base text-ink outline-none transition focus:border-accent"
               />
             </label>
+            <p id="playground-help" className="text-sm text-ink-muted">
+              Best results come from public pages with clear headings, authorship, and factual content.
+            </p>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <button
                 type="submit"
                 disabled={isAuditing}
@@ -155,11 +164,9 @@ export function PlaygroundClient() {
               </button>
               <button
                 type="button"
-                hidden={true}
-                style={{ display: 'none' }}
                 disabled={!report || isAnalyzing}
                 onClick={handleCompetitorAnalysis}
-                className="inline-flex items-center justify-center rounded-full border border-border-strong bg-paper px-6 py-3 text-sm font-semibold text-ink transition hover:border-accent hover:text-accent disabled:cursor-not-allowed disabled:opacity-50"
+                className="inline-flex w-full items-center justify-center rounded-full border border-border-strong bg-paper px-6 py-3 text-sm font-semibold text-ink transition hover:border-accent hover:text-accent disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
               >
                 {isAnalyzing ? "Trying with AI..." : "Competitor analysis"}
               </button>
@@ -289,7 +296,7 @@ function ScoreSummary({ report }: { report: SiteOpsReport }) {
           <h2 className="mt-2 font-display text-3xl font-semibold text-ink">
             {report.url}
           </h2>
-          <p className="mt-2 text-sm text-ink-muted">
+          <p className="mt-2 break-all text-sm text-ink-muted">
             Generated {new Date(report.timestamp).toLocaleString()}
           </p>
         </div>
@@ -447,7 +454,7 @@ function CompetitorResults({
                     {item.url}
                   </a>
                 </div>
-                <div className="grid grid-cols-3 gap-2 text-center">
+                <div className="grid gap-2 text-center sm:grid-cols-3">
                   <ScoreChip label="Composite" value={item.composite} />
                   <ScoreChip label="AEO" value={item.aeo} />
                   <ScoreChip label="GEO" value={item.geo} />
@@ -488,7 +495,7 @@ function CompetitorResults({
                     {item.competitor.reason}
                   </p>
                 </div>
-                <div className="grid grid-cols-3 gap-2 text-center">
+                <div className="grid gap-2 text-center sm:grid-cols-3">
                   <ScoreChip
                     label="Composite"
                     value={item.report.scores.composite}

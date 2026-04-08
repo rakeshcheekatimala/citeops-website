@@ -7,11 +7,12 @@ export async function StatsStrip() {
     { label: t("reports"), value: t("reportsValue") },
     { label: t("inputs"), value: t("inputsValue") },
     { label: t("ci"), value: t("ciValue") },
+    { label: t("audiences"), value: t("audiencesValue") },
   ];
 
   return (
     <div className="border-b border-border bg-paper-muted">
-      <div className="mx-auto grid max-w-content gap-8 px-4 py-10 sm:grid-cols-3 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-content gap-8 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         {items.map((item) => (
           <div key={item.label}>
             <p className="text-xs font-medium uppercase tracking-wide text-ink-subtle">

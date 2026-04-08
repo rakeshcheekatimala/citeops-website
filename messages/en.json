@@ -7,6 +7,8 @@
     "logoAlt": "CiteOps wordmark"
   },
   "Nav": {
+    "menu": "Menu",
+    "closeMenu": "Close",
     "why": "Why",
     "aeoGeo": "AEO & GEO",
     "how": "How it works",
@@ -19,13 +21,26 @@
   },
   "Hero": {
     "eyebrow": "Open source · MIT · CLI",
-    "title": "Measure how well your content works for AI answers not just blue links.",
-    "subtitle": "CiteOps audits URLs and local pages for AEO and GEO, explains what failed, and ships reports your team can act on. One install, your pipeline stays yours.",
-    "ctaPlayground": "Open playground",
+    "title": "See whether your pages are ready to be cited in AI answers and trusted in search.",
+    "subtitle": "CiteOps turns AEO and GEO checks into a clean score, a readable business summary, and a practical engineering punch list. Same open workflow, clearer decisions.",
+    "businessLead": "Built for teams that need one report both leadership and builders can act on: what changed, what matters, what to fix next, and how close competitors are.",
+    "ctaPlayground": "Free analysis",
     "ctaCompetitor": "Competitor analysis",
     "ctaGithub": "View on GitHub",
     "ctaNpm": "Package on npm",
-    "installLabel": "Install"
+    "installLabel": "Install",
+    "pill1": "Business summary first",
+    "pill2": "Developer-ready fixes",
+    "pill3": "Open-source workflow",
+    "panelLabel": "Report preview",
+    "panelTitle": "One output, two audiences",
+    "panelBadge": "Board + build ready",
+    "panelBusinessLabel": "For business",
+    "panelBusinessBody": "This page is strong at direct answers, but trust and freshness signals are leaving citation share on the table. Fixing schema and source attribution should improve visibility fastest.",
+    "panelDeveloperLabel": "For developers",
+    "panelDeveloperFix1": "Add FAQPage or HowTo schema for answer extraction.",
+    "panelDeveloperFix2": "Publish a visible author and `dateModified` signal.",
+    "panelDeveloperFix3": "Increase authoritative external citations in core sections."
   },
   "Stats": {
     "reports": "Report formats",
@@ -33,14 +48,39 @@
     "inputs": "Audit inputs",
     "inputsValue": "URL · file · folder · sitemap",
     "ci": "CI-ready",
-    "ciValue": "Thresholds & exit codes"
+    "ciValue": "Thresholds & exit codes",
+    "audiences": "Readable by",
+    "audiencesValue": "Business · SEO · Engineering"
   },
   "Why": {
     "title": "Why this matters now",
     "lead": "Discovery is splitting: people still search, but they also ask chat assistants that synthesize answers from many sources. If your content is not structured for citation and clarity, you can rank—and still be invisible where decisions happen.",
     "p1": "Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) are the practices that make your pages trustworthy, quotable, and machine-legible when models summarize the web.",
     "p2": "CiteOps gives you a repeatable score and a punch list—like Lighthouse did for performance—so editors, SEO, and engineering share one definition of “good enough” before you ship.",
+    "card1Title": "Invisible in answer engines",
+    "card1Body": "A page can rank well and still be absent from AI-generated answers if its structure, sourcing, and attribution are weak.",
+    "card2Title": "Teams read different signals",
+    "card2Body": "Executives want impact and risk. Developers want specific markup and content fixes. Most audits fail because they only speak one language.",
+    "card3Title": "Competitive gaps stay hidden",
+    "card3Body": "Without side-by-side comparison, teams cannot tell whether a low score is tolerable or whether a rival is already winning the answer layer.",
     "quote": "If you cannot measure it against a checklist, you cannot improve it on every release."
+  },
+  "Audience": {
+    "eyebrow": "Who it is for",
+    "title": "A cleaner story for revenue owners and implementation teams.",
+    "subtitle": "The product feels stronger when the homepage explains why this matters to the business and how quickly the team can act on it.",
+    "businessTitle": "For business leaders",
+    "businessBody": "Lead with visibility, category authority, and competitor risk. Show what the score means in plain language and why it affects demand capture.",
+    "businessBullet1": "Explain whether the page is likely to be quoted or skipped.",
+    "businessBullet2": "Call out the commercial risk of weak trust and freshness signals.",
+    "businessBullet3": "Summarize the top 3 changes that most improve discoverability.",
+    "businessImageAlt": "Business team reviewing website performance in a meeting room",
+    "developerTitle": "For developers and operators",
+    "developerBody": "Follow immediately with the exact signals to implement. That keeps the site credible with technical buyers while still being useful to non-technical stakeholders.",
+    "developerBullet1": "Map every score to a concrete check and evidence.",
+    "developerBullet2": "Show schema, heading, citation, and metadata gaps clearly.",
+    "developerBullet3": "Keep JSON, CSV, and CI outputs ready for pipelines.",
+    "developerImageAlt": "Developers collaborating over code and analytics dashboards"
   },
   "Education": {
     "title": "AEO & GEO in plain language",
@@ -66,7 +106,10 @@
   },
   "Product": {
     "title": "Built for product teams",
-    "subtitle": "Everything in the CLI is designed for shipping workflows—not one-off spreadsheets.",
+    "subtitle": "Everything in the CLI is designed for shipping workflows, clearer reporting, and believable operational use.",
+    "highlight1": "Plain-English executive framing",
+    "highlight2": "Technical evidence per check",
+    "highlight3": "Open-source and CI-friendly",
     "card1Title": "Reports that fit the audience",
     "card1Body": "HTML for stakeholders, JSON for pipelines, CSV for sitemap or folder runs.",
     "card2Title": "Project configuration",
@@ -82,10 +125,37 @@
   },
   "Action": {
     "title": "See it in your terminal",
-    "subtitle": "The overview command summarizes what the tool can do—similar spirit to a capability dashboard.",
+    "subtitle": "The terminal stays honest and technical, while the site explains the business outcome in a cleaner way.",
     "imageAlt": "Terminal screenshot of the llm-citeops overview capability dashboard",
     "codeCaption": "Quick start",
-    "codeBlock": "npx llm-citeops audit --url \"https://example.com/docs/article\" --output html --output-path ./report.html"
+    "codeBlock": "npx llm-citeops audit --url \"https://example.com/docs/article\" --output html --output-path ./report.html",
+    "detail1": "Run the same checks locally, in CI, or across a sitemap.",
+    "detail2": "Share a readable report with non-technical stakeholders without hiding the underlying evidence.",
+    "detail3": "Use the playground for fast exploration, then move the workflow into your repo."
+  },
+  "Report": {
+    "eyebrow": "Report design",
+    "title": "Make the report easy to scan in one minute and useful for a week of work.",
+    "subtitle": "The strongest reporting experience explains the business meaning first, then supports it with evidence and implementation details.",
+    "businessLabel": "Audience 01",
+    "businessTitle": "What business users should see first",
+    "business1": "A short summary of whether this page is likely to earn trust and citations.",
+    "business2": "A simple statement of competitive position: behind, equal, or ahead.",
+    "business3": "Three highest-value actions tied to visibility impact, not technical jargon.",
+    "developerLabel": "Audience 02",
+    "developerTitle": "What developers should see immediately after",
+    "developer1": "Audit evidence for each failed check, including the exact missing signal.",
+    "developer2": "Suggested schema, content structure, citation, and metadata improvements.",
+    "developer3": "Machine-readable outputs for CI gates, diffing, and automation.",
+    "sampleLabel": "Sample output",
+    "sampleTitle": "Readable summary with technical depth underneath",
+    "sampleStatus": "Needs improvement",
+    "summaryLabel": "Executive summary",
+    "summaryBody": "Answer readiness is promising, but the page is under-signaling trust. Improve freshness, citation quality, and structured guidance to make it more quotable.",
+    "fixesLabel": "Highest-value fixes",
+    "fix1": "Publish stronger authorship and freshness metadata.",
+    "fix2": "Expand support links to trusted external sources.",
+    "fix3": "Turn core sections into answer-first blocks and FAQ markup."
   },
   "Compatibility": {
     "title": "Compatibility",
@@ -102,8 +172,11 @@
     "emptyBody": "We are collecting feedback from teams using CiteOps. Check back, or star the repo to follow releases."
   },
   "Cta": {
-    "title": "Start auditing before the next release",
-    "subtitle": "Install globally or run with npx. Reports are local—no account, no cloud dependency for the core CLI.",
+    "title": "Give your team a cleaner way to judge AI visibility before the next release.",
+    "subtitle": "Use the playground for quick exploration, then move the same workflow into the CLI and CI. Reports stay local and under your control.",
+    "pill1": "Fast first scan",
+    "pill2": "Clear executive readout",
+    "pill3": "Developer-grade evidence",
     "ctaGithub": "Star on GitHub",
     "ctaDocs": "README on GitHub"
   },

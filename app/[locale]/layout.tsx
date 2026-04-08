@@ -38,9 +38,36 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
   return {
+    metadataBase: new URL("https://citeops.dev"),
     title: t("title"),
     description: t("description"),
+    applicationName: "CiteOps",
+    keywords: [
+      "AEO audit",
+      "GEO audit",
+      "AI visibility",
+      "answer engine optimization",
+      "generative engine optimization",
+      "SEO audit",
+      "llm-citeops",
+    ],
+    alternates: {
+      canonical: "/",
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: "/",
+      siteName: "CiteOps",
+      type: "website",
+      locale,
+    },
+    twitter: {
+      card: "summary_large_image",
       title: t("title"),
       description: t("description"),
     },
@@ -62,6 +89,12 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${display.variable} ${sans.variable} scroll-smooth`}
     >
       <body className="min-h-screen antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
+        >
+          Skip to content
+        </a>
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

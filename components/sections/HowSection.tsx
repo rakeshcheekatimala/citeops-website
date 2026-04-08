@@ -13,16 +13,16 @@ export async function HowSection() {
   return (
     <section
       id="how"
-      className="scroll-mt-24 border-b border-border bg-paper py-20 sm:py-24"
+      className="scroll-mt-24 border-b border-border bg-paper py-16 sm:py-24"
     >
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+      <div className="safe-pad mx-auto max-w-content sm:px-6 lg:px-8">
+        <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-4xl">
           {t("title")}
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-muted">{t("subtitle")}</p>
-        <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <p className="mt-4 max-w-2xl text-base text-ink-muted sm:text-lg">{t("subtitle")}</p>
+        <ol className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {steps.map((step, i) => (
-            <li key={step.title} className="relative">
+            <li key={step.title} className="relative rounded-[22px] border border-border bg-paper-muted p-5">
               <span className="font-display text-4xl font-semibold text-border-strong">
                 {String(i + 1).padStart(2, "0")}
               </span>

@@ -9,14 +9,14 @@ export async function ActionSection() {
   return (
     <section
       id="action"
-      className="scroll-mt-24 border-b border-border bg-wash py-20 sm:py-24"
+      className="scroll-mt-24 border-b border-border bg-wash py-16 sm:py-24"
     >
-      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-        <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
+      <div className="safe-pad mx-auto max-w-content sm:px-6 lg:px-8">
+        <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-4xl">
           {t("title")}
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-ink-muted">{t("subtitle")}</p>
-        <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:items-start">
+        <p className="mt-4 max-w-2xl text-base text-ink-muted sm:text-lg">{t("subtitle")}</p>
+        <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-start lg:gap-10">
           <div className="overflow-hidden rounded-xl border border-border bg-ink shadow-soft">
             <Image
               src={branding.overviewImageUrl}
@@ -28,12 +28,24 @@ export async function ActionSection() {
             />
           </div>
           <div>
-            <p className="text-xs font-medium uppercase tracking-wide text-ink-subtle">
-              {t("codeCaption")}
-            </p>
-            <pre className="mt-3 overflow-x-auto rounded-xl border border-border bg-card p-4 text-sm leading-relaxed text-ink shadow-soft">
-              <code>{t("codeBlock")}</code>
-            </pre>
+            <div className="rounded-[24px] border border-border bg-card p-5 shadow-soft sm:p-6">
+              <p className="text-xs font-medium uppercase tracking-wide text-ink-subtle">
+                {t("codeCaption")}
+              </p>
+              <pre className="mt-3 overflow-x-auto rounded-xl border border-border bg-paper-muted p-4 text-sm leading-relaxed text-ink">
+                <code>{t("codeBlock")}</code>
+              </pre>
+              <div className="mt-5 space-y-3">
+                {[t("detail1"), t("detail2"), t("detail3")].map((item) => (
+                  <p
+                    key={item}
+                    className="rounded-2xl bg-paper-muted px-4 py-3 text-sm leading-7 text-ink-muted"
+                  >
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
