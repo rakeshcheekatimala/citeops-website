@@ -15,9 +15,7 @@ export async function Hero() {
       <div className="safe-pad mx-auto max-w-content pb-16 pt-12 sm:px-6 sm:pb-24 sm:pt-20 lg:px-8 lg:pb-28 lg:pt-24">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-12">
           <div className="relative">
-            <p className="mb-4 text-sm font-medium uppercase tracking-wider text-accent">
-              {t("eyebrow")}
-            </p>
+           
             <h1 className="font-display text-balance text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-5xl lg:text-6xl">
               {t("title")}
             </h1>
@@ -27,7 +25,10 @@ export async function Hero() {
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-muted">
               {t("businessLead")}
             </p>
-
+            <br />
+            <p className="mb-4 text-sm font-medium uppercase tracking-wider text-accent">
+              {t("eyebrow")}
+            </p>
             <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <Link
                 href="/playground"

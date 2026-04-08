@@ -17,9 +17,7 @@ export async function ExplainerSection() {
           <h2 className="mt-4 font-display text-2xl font-semibold tracking-tight text-ink sm:text-4xl">
             {t("title")}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
-            {t("subtitle")}
-          </p>
+         
         </div>
 
         <div className="mt-10 rounded-[32px] border border-border bg-card p-4 shadow-soft sm:p-6">
@@ -44,16 +42,6 @@ export async function ExplainerSection() {
           </div>
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          {[t("point1"), t("point2"), t("point3")].map((item) => (
-            <p
-              key={item}
-              className="rounded-2xl border border-border bg-paper-muted px-4 py-4 text-sm leading-7 text-ink-muted"
-            >
-              {item}
-            </p>
-          ))}
-        </div>
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a

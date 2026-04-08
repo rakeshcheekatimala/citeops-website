@@ -27,7 +27,7 @@ export function MobileMenu({ closeLabel, menuLabel, items }: Props) {
         aria-controls="mobile-nav-panel"
         aria-label={open ? closeLabel : menuLabel}
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex items-center justify-center rounded-full border border-border-strong bg-card px-4 py-2 text-sm font-medium text-ink transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="inline-flex items-center justify-center rounded-full border border-border-strong bg-card px-3.5 py-2 text-sm font-medium text-ink transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         {open ? closeLabel : menuLabel}
       </button>
@@ -43,7 +43,7 @@ export function MobileMenu({ closeLabel, menuLabel, items }: Props) {
           <nav
             id="mobile-nav-panel"
             aria-label="Mobile"
-            className="absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[min(20rem,calc(100vw-2rem))] rounded-[24px] border border-border bg-card p-3 shadow-soft"
+            className="absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[min(20rem,calc(100vw-2rem))] rounded-[24px] border border-border bg-card/98 p-3 shadow-[0_18px_50px_rgba(26,26,26,0.16)] backdrop-blur-xl"
           >
             <div className="grid gap-2">
               {items.map((item) => {
