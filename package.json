@@ -4,12 +4,13 @@
   "description": "CiteOps (llm-citeops) — AEO and GEO content audits for the answer-engine era.",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "llm-citeops": "^1.0.2",
     "next": "^15.5.14",
     "next-intl": "^4.9.0",
     "react": "^19.0.0",

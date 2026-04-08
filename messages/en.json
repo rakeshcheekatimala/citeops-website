@@ -13,6 +13,7 @@
     "product": "Product",
     "action": "Demo",
     "reviews": "Reviews",
+    "playground": "Playground",
     "github": "GitHub",
     "npm": "npm"
   },
@@ -20,6 +21,8 @@
     "eyebrow": "Open source · MIT · CLI",
     "title": "Measure how well your content works for AI answers not just blue links.",
     "subtitle": "CiteOps audits URLs and local pages for AEO and GEO, explains what failed, and ships reports your team can act on. One install, your pipeline stays yours.",
+    "ctaPlayground": "Open playground",
+    "ctaCompetitor": "Competitor analysis",
     "ctaGithub": "View on GitHub",
     "ctaNpm": "Package on npm",
     "installLabel": "Install"

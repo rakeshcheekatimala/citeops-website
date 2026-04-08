@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
 import { branding } from "@/config/branding";
@@ -21,6 +22,13 @@ export async function Hero() {
           {t("subtitle")}
         </p>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <Link
+            href="/playground"
+            className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-wash shadow-soft transition-colors hover:bg-ink-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            {t("ctaPlayground")}
+          </Link>
+        
           <a
             href={branding.links.github}
             className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-fg shadow-soft transition-colors hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
