@@ -43,7 +43,7 @@ export function MobileMenu({ closeLabel, menuLabel, items }: Props) {
           <nav
             id="mobile-nav-panel"
             aria-label="Mobile"
-            className="absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[min(20rem,calc(100vw-2rem))] rounded-[24px] border border-border bg-card/98 p-3 shadow-[0_18px_50px_rgba(26,26,26,0.16)] backdrop-blur-xl"
+            className="absolute right-0 top-[calc(100%+0.75rem)] z-50 w-[min(20rem,calc(100vw-2rem))] rounded-[24px] border border-border bg-card p-3 shadow-[0_18px_50px_rgba(26,26,26,0.16)]"
           >
             <div className="grid gap-2">
               {items.map((item) => {

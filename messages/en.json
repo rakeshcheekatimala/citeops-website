@@ -9,11 +9,11 @@
   "Nav": {
     "menu": "Menu",
     "closeMenu": "Close",
+    "docs": "Docs",
     "why": "Why",
     "aeoGeo": "AEO & GEO",
     "how": "How it works",
     "product": "Product",
-    "action": "Demo",
     "reviews": "Reviews",
     "playground": "Playground",
     "github": "GitHub",
@@ -185,11 +185,13 @@
     "pill1": "Fast first scan",
     "pill2": "Clear executive readout",
     "pill3": "Developer-grade evidence",
+    "ctaSiteDocs": "Open docs",
     "ctaGithub": "Star on GitHub",
     "ctaDocs": "README on GitHub"
   },
   "Footer": {
     "rights": "CiteOps (llm-citeops) is MIT licensed. Respect robots.txt, terms of use, and rate limits when auditing third-party sites.",
+    "docs": "Docs",
     "github": "GitHub",
     "npm": "npm"
   }

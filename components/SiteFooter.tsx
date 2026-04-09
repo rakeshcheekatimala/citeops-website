@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 
 import { branding } from "@/config/branding";
@@ -11,6 +12,12 @@ export async function SiteFooter() {
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-sm text-ink-muted">{t("rights")}</p>
           <div className="flex gap-6">
+            <Link
+              href="/docs/getting-started/installation"
+              className="text-sm font-medium text-accent hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              {t("docs")}
+            </Link>
             <a
               href={branding.links.github}
               className="text-sm font-medium text-accent hover:text-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"

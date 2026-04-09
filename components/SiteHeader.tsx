@@ -4,11 +4,11 @@ import { SiteHeaderClient } from "@/components/SiteHeaderClient";
 import { branding } from "@/config/branding";
 
 const navKeys = [
+  { href: "/docs/getting-started/installation", key: "docs" as const },
   { href: "/#why", key: "why" as const },
   { href: "/#aeo-geo", key: "aeoGeo" as const },
   { href: "/#how", key: "how" as const },
   { href: "/#product", key: "product" as const },
-  { href: "/#action", key: "action" as const },
   { href: "/#reviews", key: "reviews" as const },
   { href: "/playground", key: "playground" as const },
 ];

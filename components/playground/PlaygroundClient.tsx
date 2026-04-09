@@ -112,11 +112,11 @@ export function PlaygroundClient() {
   }
 
   return (
-    <div className="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-8 lg:py-20">
+    <div className="safe-pad mx-auto max-w-content py-12 sm:px-6 lg:px-8 lg:py-20">
       <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10">
         <section
           aria-labelledby="playground-title"
-          className="rounded-[28px] border border-border bg-card p-5 shadow-soft sm:p-8"
+          className="min-w-0 rounded-[28px] border border-border bg-card p-5 shadow-soft sm:p-8"
         >
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">
@@ -189,7 +189,7 @@ export function PlaygroundClient() {
             <div className="mt-8 space-y-8">
               <ScoreSummary report={report} />
 
-              <section className="rounded-[24px] border border-border bg-wash p-5">
+              <section className="min-w-0 rounded-[24px] border border-border bg-wash p-5">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <h2 className="font-display text-2xl font-semibold text-ink">
@@ -231,8 +231,8 @@ export function PlaygroundClient() {
           ) : null}
         </section>
 
-        <aside className="space-y-6">
-          <div className="rounded-[28px] border border-border bg-paper-muted p-6 shadow-soft">
+        <aside className="min-w-0 space-y-6">
+          <div className="min-w-0 rounded-[28px] border border-border bg-paper-muted p-6 shadow-soft">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">
               Two modes
             </p>
@@ -262,7 +262,7 @@ export function PlaygroundClient() {
           {competitorData ? (
             <CompetitorResults data={competitorData} />
           ) : (
-            <div className="rounded-[28px] border border-dashed border-border-strong bg-card p-6">
+            <div className="min-w-0 rounded-[28px] border border-dashed border-border-strong bg-card p-6">
               <h2 className="font-display text-2xl font-semibold text-ink">
                 Competitor analysis output
               </h2>
@@ -287,13 +287,13 @@ function ScoreSummary({ report }: { report: SiteOpsReport }) {
   ];
 
   return (
-    <section className="rounded-[24px] border border-border bg-paper-muted p-5">
+    <section className="min-w-0 rounded-[24px] border border-border bg-paper-muted p-5">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
+        <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-ink-subtle">
             Audit result
           </p>
-          <h2 className="mt-2 font-display text-3xl font-semibold text-ink">
+          <h2 className="mt-2 break-words font-display text-2xl font-semibold text-ink sm:text-3xl">
             {report.url}
           </h2>
           <p className="mt-2 break-all text-sm text-ink-muted">
@@ -313,12 +313,12 @@ function ScoreSummary({ report }: { report: SiteOpsReport }) {
         {scores.map((score) => (
           <div
             key={score.label}
-            className="rounded-[20px] border border-border bg-card px-5 py-4"
+            className="min-w-0 rounded-[20px] border border-border bg-card px-5 py-4"
           >
             <p className="text-sm font-medium uppercase tracking-[0.16em] text-ink-subtle">
               {score.label}
             </p>
-            <p className="mt-3 font-display text-5xl font-semibold text-ink">
+            <p className="mt-3 font-display text-4xl font-semibold text-ink sm:text-5xl">
               {score.value}
             </p>
           </div>
@@ -349,11 +349,11 @@ function AuditList({
         {audits.map((audit) => (
           <article
             key={audit.id}
-            className="rounded-[24px] border border-border bg-card p-5"
+            className="min-w-0 rounded-[24px] border border-border bg-card p-5"
           >
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <h3 className="font-display text-2xl font-semibold text-ink">
+              <div className="min-w-0">
+                <h3 className="break-words font-display text-xl font-semibold text-ink sm:text-2xl">
                   {audit.title}
                 </h3>
                 <p className="mt-2 text-sm leading-7 text-ink-muted">
@@ -387,8 +387,10 @@ function AuditList({
                   {audit.recommendation.instruction}
                 </p>
                 {audit.recommendation.code_snippet ? (
-                  <pre className="mt-4 overflow-x-auto rounded-[18px] bg-ink p-4 text-sm leading-6 text-paper">
-                    <code>{audit.recommendation.code_snippet}</code>
+                  <pre className="mt-4 max-w-full overflow-x-auto rounded-[18px] bg-ink p-4 text-sm leading-6 text-paper">
+                    <code className="block w-max min-w-full whitespace-pre">
+                      {audit.recommendation.code_snippet}
+                    </code>
                   </pre>
                 ) : null}
               </div>
@@ -406,7 +408,7 @@ function CompetitorResults({
   data: CompetitorAnalysisResponse;
 }) {
   return (
-    <div className="space-y-6 rounded-[28px] border border-border bg-card p-6 shadow-soft">
+    <div className="min-w-0 space-y-6 rounded-[28px] border border-border bg-card p-6 shadow-soft">
       <div>
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">
           AI verdict
@@ -440,10 +442,10 @@ function CompetitorResults({
           {data.analysis.competitorRankings.map((item) => (
             <article
               key={item.url}
-              className="rounded-[22px] border border-border bg-paper-muted p-4"
+              className="min-w-0 rounded-[22px] border border-border bg-paper-muted p-4"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                <div>
+                <div className="min-w-0">
                   <h4 className="text-lg font-semibold text-ink">{item.name}</h4>
                   <a
                     href={item.url}
@@ -454,7 +456,7 @@ function CompetitorResults({
                     {item.url}
                   </a>
                 </div>
-                <div className="grid gap-2 text-center sm:grid-cols-3">
+                <div className="grid grid-cols-1 gap-2 text-center sm:grid-cols-3">
                   <ScoreChip label="Composite" value={item.composite} />
                   <ScoreChip label="AEO" value={item.aeo} />
                   <ScoreChip label="GEO" value={item.geo} />
@@ -476,10 +478,10 @@ function CompetitorResults({
           {data.competitors.map((item) => (
             <article
               key={item.competitor.url}
-              className="rounded-[20px] border border-border bg-paper-muted p-4"
+              className="min-w-0 rounded-[20px] border border-border bg-paper-muted p-4"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                <div>
+                <div className="min-w-0">
                   <p className="text-lg font-semibold text-ink">
                     {item.competitor.name}
                   </p>
@@ -495,7 +497,7 @@ function CompetitorResults({
                     {item.competitor.reason}
                   </p>
                 </div>
-                <div className="grid gap-2 text-center sm:grid-cols-3">
+                <div className="grid grid-cols-1 gap-2 text-center sm:grid-cols-3">
                   <ScoreChip
                     label="Composite"
                     value={item.report.scores.composite}
@@ -523,7 +525,7 @@ function DownloadButton({
     <button
       type="button"
       onClick={onClick}
-      className="rounded-full border border-border-strong bg-card px-4 py-2 text-sm font-semibold text-ink transition hover:border-accent hover:text-accent"
+      className="max-w-full rounded-full border border-border-strong bg-card px-4 py-2 text-sm font-semibold text-ink transition hover:border-accent hover:text-accent"
     >
       {label}
     </button>
@@ -552,7 +554,7 @@ function TextList({ title, items }: { title: string; items: string[] }) {
 
 function ScoreChip({ label, value }: { label: string; value: number }) {
   return (
-    <div className="rounded-2xl bg-card px-3 py-2">
+    <div className="min-w-0 rounded-2xl bg-card px-3 py-2">
       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-subtle">
         {label}
       </p>
