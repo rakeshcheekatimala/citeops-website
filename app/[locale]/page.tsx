@@ -19,6 +19,7 @@ import { ProductSection } from "@/components/sections/ProductSection";
 import { ReportSection } from "@/components/sections/ReportSection";
 import { ReviewsSection } from "@/components/sections/ReviewsSection";
 import { StatsStrip } from "@/components/sections/StatsStrip";
+import { WorkflowSection } from "@/components/sections/WorkflowSection";
 import { WhySection } from "@/components/sections/WhySection";
 import { SITE_LAST_UPDATED_ISO } from "@/config/content-freshness";
 import { SITE_URL } from "@/config/site-url";
@@ -70,130 +71,79 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   const baseUrl = SITE_URL;
   const pageUrl = locale === "en" ? baseUrl : `${baseUrl}/${locale}`;
-  const orgId = `${baseUrl}#organization`;
-  const websiteId = `${baseUrl}#website`;
-  const authorId = `${baseUrl}#author`;
-  const webpageId = `${pageUrl}#webpage`;
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": orgId,
-        name: "CiteOps",
-        url: baseUrl,
-        sameAs: [
-          "https://github.com/rakeshcheekatimala/llm-citeops",
-          "https://www.npmjs.com/package/llm-citeops",
-        ],
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "CiteOps",
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "macOS, Linux, Windows",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
       },
-      {
-        "@type": "WebSite",
-        "@id": websiteId,
-        name: "CiteOps",
-        url: baseUrl,
-        description:
-          "AEO and GEO audits for teams that need readable reports and developer-grade evidence.",
-        publisher: { "@id": orgId },
-        inLanguage: locale,
-      },
-      {
+      url: pageUrl,
+      description:
+        "Open-source audit tooling and playground for Answer Engine Optimization and Generative Engine Optimization.",
+      author: {
         "@type": "Person",
-        "@id": authorId,
         name: "Rakesh Cheekatimala",
         url: AUTHOR_PROFILE,
         jobTitle: "Founder",
-        worksFor: { "@id": orgId },
       },
-      {
-        "@type": "WebPage",
-        "@id": webpageId,
-        url: pageUrl,
-        name: "CiteOps — AEO & GEO audits for the answer-engine era",
-        isPartOf: { "@id": websiteId },
-        mainEntity: { "@id": `${pageUrl}#faq` },
-        author: { "@id": authorId },
-        publisher: { "@id": orgId },
-        datePublished: SITE_LAST_UPDATED_ISO,
-        dateModified: SITE_LAST_UPDATED_ISO,
-        inLanguage: locale,
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": `${pageUrl}#software`,
+      publisher: {
+        "@type": "Organization",
         name: "CiteOps",
-        applicationCategory: "DeveloperApplication",
-        operatingSystem: "macOS, Linux, Windows",
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "USD",
+        url: baseUrl,
+      },
+      dateModified: SITE_LAST_UPDATED_ISO,
+      datePublished: SITE_LAST_UPDATED_ISO,
+      about: [
+        { "@type": "Thing", "name": "Answer Engine Optimization" },
+        { "@type": "Thing", "name": "Generative Engine Optimization" },
+        { "@type": "Thing", "name": "AI visibility audits" },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What does llm-citeops help content teams measure?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "llm-citeops measures how ready a page is to be quoted in AI answers and trusted in search using AEO, GEO, and composite scoring.",
+          },
         },
-        url: pageUrl,
-        description:
-          "Open-source audit tooling and playground for Answer Engine Optimization and Generative Engine Optimization.",
-        author: { "@id": authorId },
-        publisher: { "@id": orgId },
-        dateModified: SITE_LAST_UPDATED_ISO,
-        datePublished: SITE_LAST_UPDATED_ISO,
-        about: [
-          { "@type": "Thing", name: "Answer Engine Optimization" },
-          { "@type": "Thing", name: "Generative Engine Optimization" },
-          { "@type": "Thing", name: "AI visibility audits" },
-        ],
-      },
-      {
-        "@type": "FAQPage",
-        "@id": `${pageUrl}#faq`,
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "What does llm-citeops help content teams measure?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "llm-citeops measures how ready a page is to be quoted in AI answers and trusted in search using AEO, GEO, and composite scoring.",
-            },
+        {
+          "@type": "Question",
+          name: "How does llm-citeops compare with manual reviews?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "llm-citeops gives content teams a repeatable checklist, structured scoring, and exportable reports instead of one-off subjective reviews.",
           },
-          {
-            "@type": "Question",
-            name: "How does llm-citeops compare with manual reviews?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "llm-citeops gives content teams a repeatable checklist, structured scoring, and exportable reports instead of one-off subjective reviews.",
-            },
+        },
+        {
+          "@type": "Question",
+          name: "Can developers use llm-citeops in CI?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. Developers can run URL, file, directory, and sitemap audits, export JSON or CSV, and enforce thresholds in CI.",
           },
-          {
-            "@type": "Question",
-            name: "Can developers use llm-citeops in CI?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. Developers can run URL, file, directory, and sitemap audits, export JSON or CSV, and enforce thresholds in CI.",
-            },
+        },
+        {
+          "@type": "Question",
+          name: "Why do AEO and GEO both matter for B2B teams?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "AEO helps pages become direct answers, while GEO helps teams build the trust signals, citations, and authority needed to become cited sources.",
           },
-          {
-            "@type": "Question",
-            name: "Why do AEO and GEO both matter for B2B teams?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "AEO helps pages become direct answers, while GEO helps teams build the trust signals, citations, and authority needed to become cited sources.",
-            },
-          },
-        ],
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: pageUrl,
-          },
-        ],
-      },
-    ],
-  };
+        },
+      ],
+    },
+  ];
 
   return (
     <>
@@ -208,6 +158,7 @@ export default async function HomePage({ params }: Props) {
         <AudienceSection />
         <EducationSection />
         <HowSection />
+        <WorkflowSection />
         <ComparisonSection />
         <ReportSection />
         <ProductSection />

@@ -113,6 +113,17 @@
     "step4Title": "Export & gate",
     "step4Body": "Print HTML for people, JSON for scripts, or CSV for batches. Use --ci and --threshold to fail builds when scores drop."
   },
+  "Workflow": {
+    "eyebrow": "Developer workflow",
+    "title": "How do teams use llm-citeops with GitHub, Vercel, and HTTPS pages?",
+    "subtitle": "These are the practical workflows teams care about when they move from one-off checks to repeatable release habits.",
+    "card1Title": "How do developers audit HTTPS pages before release?",
+    "card1Body": "Teams run llm-citeops against production-like HTTPS URLs so they can review answer readiness, trust signals, and citation gaps before a page ships.",
+    "card2Title": "How do teams use llm-citeops with GitHub and CI?",
+    "card2Body": "Teams export HTML and JSON reports into GitHub workflows, compare score changes across releases, and block merges when the agreed bar drops.",
+    "card3Title": "What type of report fits Vercel previews and production sites?",
+    "card3Body": "HTML works for human review, JSON fits automation, and CSV helps content ops benchmark many URLs from Vercel previews or live properties."
+  },
   "Comparison": {
     "eyebrow": "Comparison & alternatives",
     "title": "llm-citeops vs manual review vs generic AI prompts",
