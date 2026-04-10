@@ -7,7 +7,10 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
+import { SITE_URL } from "@/config/site-url";
 import { routing } from "@/i18n/routing";
+
+const AUTHOR_PROFILE = "https://github.com/rakeshcheekatimala";
 
 const display = Source_Serif_4({
   variable: "--font-display",
@@ -38,10 +41,13 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
   return {
-    metadataBase: new URL("https://citeops.dev"),
+    metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
     applicationName: "CiteOps",
+    authors: [{ name: "Rakesh Cheekatimala", url: AUTHOR_PROFILE }],
+    creator: "Rakesh Cheekatimala",
+    publisher: "LLM-CiteOps",
     keywords: [
       "AEO audit",
       "GEO audit",

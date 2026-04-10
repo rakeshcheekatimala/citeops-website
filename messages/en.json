@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "CiteOps — AEO & GEO audits for the answer-engine era",
-    "description": "Lighthouse-inspired CLI that scores web content for Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). HTML, JSON, and CSV reports plus CI gates."
+    "description": "Free CLI for Node.js. Score pages for answer-ready content (AEO) and AI trust (GEO). Print HTML, JSON, or CSV. Fail CI when scores slip."
   },
   "branding": {
     "logoAlt": "CiteOps wordmark"
@@ -21,9 +21,10 @@
   },
   "Hero": {
     "eyebrow": "Open source · CLI · AI visibility",
-    "title": "See whether your pages are ready to be cited in AI answers and trusted in search.",
-    "subtitle": "LLM-CiteOps turns AEO and GEO checks into a clean score, a readable business summary, and actionable engineering changes for developers to identiy what to fix.",
-    "businessLead": "Built for teams that need one report both leadership and builders can act on: what changed, what matters, what to fix next.",
+    "title": "See if your pages can rank in search and get cited in AI answers.",
+    "subtitle": "CiteOps runs AEO and GEO checks. You get one score, a short summary, and fixes devs can ship. The package is llm-citeops on npm and GitHub.",
+    "questionsLead": "What should you check before launch? Check answer fit, trust cues, and cite odds. Why use CI? Each release can meet the same bar. That bar covers search and AI chats.",
+    "businessLead": "One report for leaders and builders. It shows what changed, what matters, and what to fix next.",
     "ctaPlayground": "Free analysis",
     "ctaCompetitor": "Competitor analysis",
     "ctaGithub": "View on GitHub",
@@ -54,29 +55,29 @@
   },
   "Why": {
     "title": "Why this matters now",
-    "lead": "Discovery is splitting: people still search, but they also ask chat assistants that synthesize answers from many sources. If your content is not structured for citation and clarity, you can rank—and still be invisible where decisions happen.",
-    "p1": "Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) are the practices that make your pages trustworthy, quotable, and machine-legible when models summarize the web.",
-    "p2": "CiteOps gives you a repeatable score and a punch list—like Lighthouse did for performance—so editors, SEO, and engineering share one definition of “good enough” before you ship.",
+    "lead": "People still search the web. They also use chats that blend many sites. Messy pages or thin sources can rank yet miss buyers.",
+    "p1": "AEO helps you win direct answers. GEO helps AI pick you as a trusted source. You want both.",
+    "p2": "CiteOps gives one score and a fix list. It is like Lighthouse, but for AI-ready pages. SEO, content, and eng agree on “good” before ship.",
     "card1Title": "Invisible in answer engines",
-    "card1Body": "A page can rank well and still be absent from AI-generated answers if its structure, sourcing, and attribution are weak.",
+    "card1Body": "A page can rank and still miss AI answers. Weak structure and weak sources cause that.",
     "card2Title": "Teams read different signals",
-    "card2Body": "Executives want impact and risk. Developers want specific markup and content fixes. Most audits fail because they only speak one language.",
+    "card2Body": "Leaders want risk and impact. Devs want clear markup fixes. Many audits speak to only one group.",
     "card3Title": "Competitive gaps stay hidden",
-    "card3Body": "Without side-by-side comparison, teams cannot tell whether a low score is tolerable or whether a rival is already winning the answer layer.",
+    "card3Body": "Compare side by side. Then you know if a low score is OK—or if a rival wins AI cites.",
     "quote": "If you cannot measure it against a checklist, you cannot improve it on every release."
   },
   "Audience": {
     "eyebrow": "Who it is for",
-    "title": "A cleaner story for revenue owners and implementation teams.",
-    "subtitle": "The product feels stronger when the homepage explains why this matters to the business and how quickly the team can act on it.",
+    "title": "One story for revenue owners and build teams.",
+    "subtitle": "Say why this helps the business. Say how fast the team can act.",
     "businessTitle": "For business leaders",
-    "businessBody": "Lead with visibility, category authority, and competitor risk. Show what the score means in plain language and why it affects demand capture.",
+    "businessBody": "Lead with reach, trust, and rival risk. Say what the score means. Say how it hits demand.",
     "businessBullet1": "Explain whether the page is likely to be quoted or skipped.",
     "businessBullet2": "Call out the commercial risk of weak trust and freshness signals.",
     "businessBullet3": "Summarize the top 3 changes that most improve discoverability.",
     "businessImageAlt": "Business team reviewing website performance in a meeting room",
     "developerTitle": "For developers and operators",
-    "developerBody": "Follow immediately with the exact signals to implement. That keeps the site credible with technical buyers while still being useful to non-technical stakeholders.",
+    "developerBody": "Next, list the exact fixes. Tech buyers stay hooked. Other teams still get value.",
     "developerBullet1": "Map every score to a concrete check and evidence.",
     "developerBullet2": "Show schema, heading, citation, and metadata gaps clearly.",
     "developerBullet3": "Keep JSON, CSV, and CI outputs ready for pipelines.",
@@ -86,16 +87,16 @@
     "title": "AEO & GEO in plain language",
     "subtitle": "Both aim for visibility when answers are generated—not just ten blue links. CiteOps checks your content with that lens.",
     "aeoTitle": "AEO — Answer Engine Optimization",
-    "aeoBody": "Optimizing for engines that extract direct answers: featured snippets, voice, and structured Q&A surfaces. Strong headings, factual blocks, and clear entity signals help your page become the answer source—not a footnote.",
-    "aeoProduct": "CiteOps surfaces gaps that weaken answer readiness: clarity, structure, and signals models use when choosing what to quote.",
+    "aeoBody": "AEO is for engines that pull short answers. Think snippets, voice, and Q&A blocks. Use clear headings and facts. That helps you get cited.",
+    "aeoProduct": "CiteOps shows gaps in clarity and structure. It shows what models need to quote you.",
     "geoTitle": "GEO — Generative Engine Optimization",
-    "geoBody": "Optimizing for large language models that synthesize across sources. Consistent naming, attributable facts, and crawl-friendly markup reduce hallucination risk and improve the odds your brand is represented accurately.",
-    "geoProduct": "CiteOps scores GEO-oriented signals alongside AEO so you see composite risk, not a single vanity metric."
+    "geoBody": "GEO is for AI that reads many pages at once. Use one brand name. Add facts you can trace. Use clean HTML. That cuts wrong AI facts and keeps your brand right.",
+    "geoProduct": "CiteOps scores GEO with AEO. You see combined risk—not one vanity score."
   },
   "Explainer": {
     "eyebrow": "AI visibility map",
     "title": "Show the market how visibility moves from ranking to being cited.",
-    "subtitle": "This visual belongs right after the hero because it explains the category quickly, builds trust with founders and operators, and gives the rest of the page a clearer frame.",
+    "subtitle": "This chart sits after the hero. It explains the idea fast. It helps founders and ops trust the story.",
     "imageAlt": "Explainer graphic showing how SEO connects to AEO and GEO in AI search",
     "openImage": "Open full visual",
     "cta": "Try the playground"
@@ -104,13 +105,38 @@
     "title": "How CiteOps works",
     "subtitle": "From a URL or file to a report you can share in CI or a browser.",
     "step1Title": "Choose input",
-    "step1Body": "Point the CLI at a URL, a Markdown or HTML file, a folder, or a sitemap. Rate limits and robots.txt are respected unless you override for your own property.",
+    "step1Body": "Point the CLI at a URL, a Markdown or HTML file, a folder, or a sitemap. It honors rate limits and robots.txt unless you override on your own site.",
     "step2Title": "Run the audit",
-    "step2Body": "Checks run against your content; failures include explanations so writers and devs know what to fix.",
+    "step2Body": "Checks run on your content. Failed checks explain why. Writers and devs see what to fix.",
     "step3Title": "Get scores",
-    "step3Body": "Composite, AEO, and GEO scores summarize readiness. Tune with optional .citeops.json when you need project defaults.",
+    "step3Body": "You get combined, AEO, and GEO scores. Add .citeops.json for project defaults if you want.",
     "step4Title": "Export & gate",
-    "step4Body": "Emit HTML for humans, JSON for automation, or CSV for batches. Use --ci and --threshold to fail builds when scores drop."
+    "step4Body": "Print HTML for people, JSON for scripts, or CSV for batches. Use --ci and --threshold to fail builds when scores drop."
+  },
+  "Comparison": {
+    "eyebrow": "Comparison & alternatives",
+    "title": "llm-citeops vs manual review vs generic AI prompts",
+    "subtitle": "Should you audit by hand? Use a chat model from OpenAI? Or run a CLI on each release? This table lines up three paths.",
+    "col1": "Approach",
+    "col2": "llm-citeops",
+    "col3": "Manual review",
+    "col4": "Generic AI prompt",
+    "row1Label": "Repeatable scoring",
+    "row1CiteOps": "AEO, GEO, and combined scores you can export.",
+    "row1Manual": "Often subjective. Scores drift by reviewer.",
+    "row1Generic": "It can sum things up. It does not give a steady audit line.",
+    "row2Label": "Workflow fit",
+    "row2CiteOps": "Runs local, in CI, and in batch reviews.",
+    "row2Manual": "Hard to scale across many pages or ships.",
+    "row2Generic": "Fine for ideas. Weak for rules and release gates.",
+    "row3Label": "Evidence and outputs",
+    "row3CiteOps": "Returns HTML, JSON, and CSV with clear findings.",
+    "row3Manual": "Proof often lives in notes or sheets.",
+    "row3Generic": "Quality depends on the prompt. It is hard to compare runs.",
+    "row4Label": "Best use case",
+    "row4CiteOps": "Teams that need one list of what to fix next.",
+    "row4Manual": "Small one-off reviews or editorial spot checks.",
+    "row4Generic": "Early research or narrative drafting."
   },
   "Product": {
     "title": "Built for product teams",
@@ -172,6 +198,19 @@
     "npm": "npm / npx",
     "ci": "GitHub Actions, GitLab CI, etc.",
     "os": "macOS · Linux · Windows"
+  },
+  "Faq": {
+    "eyebrow": "FAQ",
+    "title": "What do teams usually ask before they adopt llm-citeops?",
+    "subtitle": "Content, SEO, and devs ask these when they pick AI visibility tools.",
+    "q1": "What does llm-citeops help content teams measure?",
+    "a1": "It checks if a page can be the answer and the source. One report scores clarity, structure, trust, dates, and cite fit.",
+    "q2": "How does llm-citeops compare with manual reviews?",
+    "a2": "Manual review can spark ideas. It is slow and uneven. llm-citeops gives a steady audit, a score you can track, and fixes for writers, SEO, and devs.",
+    "q3": "Can developers use llm-citeops in CI and automation?",
+    "a3": "Yes. Devs can run it on URLs, files, folders, and sitemaps. They can export HTML, JSON, or CSV. They can set CI floors to block ships when scores slip.",
+    "q4": "Why do AEO and GEO both matter for B2B teams?",
+    "a4": "AEO helps when buyers ask plain questions. GEO helps when AI picks which sites to trust. B2B teams need both to show up in AI-led discovery."
   },
   "Reviews": {
     "title": "What people say",

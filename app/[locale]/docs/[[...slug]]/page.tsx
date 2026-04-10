@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { StructuredData } from "@/components/StructuredData";
 import { DocsShell } from "@/components/docs/DocsShell";
+import { SITE_URL } from "@/config/site-url";
 import { defaultDocsSlug, docsGroups, getDocsPage } from "@/lib/docs";
 
 type Props = {
@@ -51,7 +52,7 @@ export default async function DocsPage({ params }: Props) {
   }
 
   const canonicalPath = `/docs/${(slug && slug.length > 0 ? slug : defaultDocsSlug).join("/")}`;
-  const baseUrl = "https://citeops.dev";
+  const baseUrl = SITE_URL;
   const structuredData = [
     {
       "@context": "https://schema.org",

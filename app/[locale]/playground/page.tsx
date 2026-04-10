@@ -1,4 +1,5 @@
 import { StructuredData } from "@/components/StructuredData";
+import { SITE_URL } from "@/config/site-url";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PlaygroundClient } from "@/components/playground/PlaygroundClient";
@@ -9,7 +10,7 @@ export default function PlaygroundPage() {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "CiteOps Playground",
-      url: "https://citeops.dev/playground",
+      url: `${SITE_URL}/playground`,
       description:
         "Interactive AEO and GEO audit playground with downloadable reports.",
     },
@@ -21,13 +22,13 @@ export default function PlaygroundPage() {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://citeops.dev/",
+          item: `${SITE_URL}/`,
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Playground",
-          item: "https://citeops.dev/playground",
+          item: `${SITE_URL}/playground`,
         },
       ],
     },

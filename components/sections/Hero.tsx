@@ -22,6 +22,9 @@ export async function Hero() {
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
               {t("subtitle")}
             </p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted sm:text-lg">
+              {t("questionsLead")}
+            </p>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-muted">
               {t("businessLead")}
             </p>
