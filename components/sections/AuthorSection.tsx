@@ -23,8 +23,7 @@ export function AuthorSection() {
                 Rakesh Cheekatimala
               </a>
               {" "}
-              builds CiteOps. llm-citeops is open source on GitHub and npm. He
-              helps teams in San Francisco, London, and Singapore.
+              builds CiteOps. llm-citeops is open source on GitHub and npm. 
             </p>
           </div>
           <div className="rounded-2xl bg-paper-muted px-4 py-3">
